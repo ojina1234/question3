@@ -120,9 +120,10 @@ try:
 
     year_range = st.sidebar.slider(
         '연도 범위 선택',
-        min_value=min_year,
-        max_value=max_year,
-        value=(min_year, max_year)
+        min_value=1764,
+        max_value=1928,
+        value=(min_year, max_year),
+        label_visibility="collapsed"
     )
 
 
@@ -131,7 +132,8 @@ try:
         '히스토그램 구간 수',
         min_value=5,
         max_value=100,
-        value=38
+        value=38,
+        label_visibility="collapsed"
     )
 
     # 추세선 차수 조절
@@ -139,7 +141,8 @@ try:
         '추세선 차수',
         min_value=1,
         max_value=5,
-        value=3
+        value=3,
+        label_visibility="collapsed"
     )
 
     # 산점도 점 크기 조절
@@ -147,7 +150,8 @@ try:
         '산점도 점 크기',
         min_value=5,
         max_value=50,
-        value=26
+        value=26,
+        label_visibility="collapsed"
     )
 
 
@@ -158,7 +162,8 @@ try:
         min_value=0.10,
         max_value=1.00,
         value=0.50,
-        step=0.1
+        step=0.1,
+        label_visibility="collapsed"
     )
 
 
