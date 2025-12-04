@@ -118,53 +118,60 @@ try:
     min_year = int(df[year_col].min())
     max_year = int(df[year_col].max())
 
+    st.sidebar.markdown("**연도 범위 선택** (1764 ~ 1928)")
     year_range = st.sidebar.slider(
-        '연도 범위 선택',
+        '',
         min_value=1764,
         max_value=1928,
         value=(min_year, max_year),
         label_visibility="collapsed"
     )
-
+    st.sidebar.markdown(f"**현재 값:** {year_range[0]}년 ~ {year_range[1]}년")
 
     # 히스토그램 빈(bin) 수 조절
+    st.sidebar.markdown("**히스토그램 구간 수** (5 ~ 100)")
     hist_bins = st.sidebar.slider(
-        '히스토그램 구간 수',
+        '',
         min_value=5,
         max_value=100,
         value=38,
         label_visibility="collapsed"
     )
+    st.sidebar.markdown(f"**현재 값:** {hist_bins}")
 
     # 추세선 차수 조절
+    st.sidebar.markdown("**추세선 차수** (1 ~ 5)")
     trend_degree = st.sidebar.slider(
-        '추세선 차수',
+        '',
         min_value=1,
         max_value=5,
         value=3,
         label_visibility="collapsed"
     )
+    st.sidebar.markdown(f"**현재 값:** {trend_degree}")
 
     # 산점도 점 크기 조절
+    st.sidebar.markdown("**산점도 점 크기** (5 ~ 50)")
     point_size = st.sidebar.slider(
-        '산점도 점 크기',
+        '',
         min_value=5,
         max_value=50,
         value=26,
         label_visibility="collapsed"
     )
-
-
+    st.sidebar.markdown(f"**현재 값:** {point_size}")
 
     # 산점도 투명도 조절
+    st.sidebar.markdown("**산점도 투명도** (0.10 ~ 1.00)")
     point_alpha = st.sidebar.slider(
-        '산점도 투명도',
+        '',
         min_value=0.10,
         max_value=1.00,
         value=0.50,
         step=0.1,
         label_visibility="collapsed"
     )
+    st.sidebar.markdown(f"**현재 값:** {point_alpha:.2f}")
 
 
 
