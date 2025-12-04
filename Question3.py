@@ -1,5 +1,3 @@
-# Q3. Streamlit 시각화 + 인터랙션 추가
-
 # --------------------------------------------
 # Streamlit 시각화 + 인터랙션 추가
 # sunspots.csv 파일이 에디터 폴더의 data/아래에 있어야 합니다.
@@ -51,7 +49,7 @@ def plot_advanced_sunspot_visualizations(df, sunactivity_col='SUNACTIVITY',
     try:
         df_20th = df.loc["1900":"2000"]
         if not df_20th.empty:
-            '''코드를 작성하시오'''
+            
             axs[1, 0].boxplot(df_20th[sunactivity_col], vert=False)
     except:
         # 해당 기간 데이터가 없을 경우 예외 처리
@@ -116,10 +114,10 @@ try:
             year_col = 'YEAR'
     else:
         year_col = 'YEAR'
-    
+
     min_year = int(df[year_col].min())
     max_year = int(df[year_col].max())
-    
+
     year_range = st.sidebar.slider(
         '연도 범위 선택',
         min_value=min_year,
