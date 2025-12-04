@@ -120,9 +120,9 @@ try:
 
     year_range = st.sidebar.slider(
         '연도 범위 선택',
-        min_value=1764,
-        max_value=1928,
-        value=(min_year, max_year)
+        min_value=min_year,
+        max_value=max_year,
+        value=(1764, 1928)
     )
 
 
